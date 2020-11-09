@@ -29,10 +29,6 @@ jobs:
     - name: Cloud Defense Scan
       env:
         SCA_SCAN_URL: https://cd-scanner.herokuapp.com/processAndSave
+        PROJECT_NAME: vulnerable-node-action
+        CD_API_KEY: ${{ secrets.CD_API_KEY }}
       uses: cdefense/actions/node@main
-      with:
-        args: |
-          - --project-name
-          - vulnerable-node-action 
-          - --api-key
-          - ${{ secrets.CD_API_KEY }}
