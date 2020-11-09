@@ -31,4 +31,4 @@ jobs:
         SCA_SCAN_URL: https://cd-scanner.herokuapp.com/processAndSave
       uses: cdefense/actions/node@main
       with:
-        args: --project-name=vulnerable-node-action --api-key=${{ secrets.CD_API_KEY }}
+        args: --project-name vulnerable-node-action --api-key ${{ secrets.CD_API_KEY }}
