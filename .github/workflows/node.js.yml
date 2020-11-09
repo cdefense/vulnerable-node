@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}    
     - run: npm install
+    - run: npm audit --json
     - name: Cloud Defense Scan
       env:
         SCA_SCAN_URL: https://cd-scanner.herokuapp.com/processAndSave
@@ -33,4 +34,4 @@ jobs:
         npm install -g license-checker
         curl https://raw.githubusercontent.com/CloudDefenseAI/cd/master/latest/cd-latest-linux-x64.tar.gz > /tmp/cd-latest-linux-x64.tar.gz
         tar -C /tmp -xzf /tmp/cd-latest-linux-x64.tar.gz && chmod +x /tmp/cdefense
-        /tmp/cdefense scan --verbose --lang=node --project-name=vulnerable-node-github-action --api-key=${{ secrets.CD_API_KEY }}
+        /tmp/cdefense scan -q --lang=node --project-name=vulnerable-node-github-action --api-key=${{ secrets.CD_API_KEY }}
