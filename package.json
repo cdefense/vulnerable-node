@@ -14,14 +14,14 @@
   "dependencies": {
     "commander": "^5.1.0",
     "core-js": "^2.6.2",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "rxjs": "^6.1.0",
     "tslib": "^1.9.0",
     "zone.js": "^0.8.27",
     "cookie": "0.4.0"
   },
   "devDependencies": {
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "core-js": "^2.6.2",
     "rxjs": "^6.1.0",
     "tslib": "^1.9.0",
